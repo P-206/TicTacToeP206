@@ -2,7 +2,7 @@ package is.ru.TicTacToe;
 
 public class TicTacToe{
 
-    private char[][] grid = new char[3][3];
+    private static char[][] grid = new char[3][3];
     
     public TicTacToe(){
         fill(grid);
@@ -16,11 +16,12 @@ public class TicTacToe{
         }
     }
 
-    public static char checkGrid(int x, int y, char[][] grid ){
+    public static char checkGrid(int x, int y){
         return grid[x][y];
     }
 
     public static void main(String[] args) {
         TicTacToe game = new TicTacToe();
+	System.out.println(game.checkGrid(1,1));
     }
 }
