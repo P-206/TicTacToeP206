@@ -13,3 +13,6 @@ hs_err_pid*
 
 # Vim swap files
 *.swp
+
+# .Gradle files
+.gradle
