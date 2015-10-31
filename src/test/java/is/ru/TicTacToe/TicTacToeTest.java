@@ -10,9 +10,9 @@ public class TicTacToeTest {
     	}
 
 	@Test
-	public void testEmptyString() {
+	public void testGrid() {
 		TicTacToe tictactoe = new TicTacToe();
-		assertEquals("Tic Tac Toe Mothafucka", tictactoe.print());
+		assertEquals('-', tictactoe.checkGrid(1,1));
+		
 	}
-
 }
