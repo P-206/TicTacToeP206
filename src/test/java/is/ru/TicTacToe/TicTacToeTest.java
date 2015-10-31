@@ -11,8 +11,8 @@ public class TicTacToeTest {
 
 	@Test
 	public void testEmptyString() {
-		TTT ttt = new TTT();
-		assertEquals("Tic Tac Toe Mothafucka", ttt.print());
+		TicTacToe tictactoe = new TicTacToe();
+		assertEquals("Tic Tac Toe Mothafucka", tictactoe.print());
 	}
 
 }
