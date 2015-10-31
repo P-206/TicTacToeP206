@@ -22,6 +22,5 @@ public class TicTacToe{
 
     public static void main(String[] args) {
         TicTacToe game = new TicTacToe();
-	System.out.println(game.checkGrid(1,1));
     }
 }

@@ -12,7 +12,14 @@ public class TicTacToeTest {
 	@Test
 	public void testGrid() {
 		TicTacToe tictactoe = new TicTacToe();
+		assertEquals('-', tictactoe.checkGrid(0,0));
+		assertEquals('-', tictactoe.checkGrid(0,1));
+		assertEquals('-', tictactoe.checkGrid(0,2));
+		assertEquals('-', tictactoe.checkGrid(1,0));
 		assertEquals('-', tictactoe.checkGrid(1,1));
-		
+		assertEquals('-', tictactoe.checkGrid(1,2));
+		assertEquals('-', tictactoe.checkGrid(2,0));
+		assertEquals('-', tictactoe.checkGrid(2,1));
+		assertEquals('-', tictactoe.checkGrid(2,2));	
 	}
 }
