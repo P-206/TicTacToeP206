@@ -3,9 +3,11 @@ package is.ru.TicTacToe;
 public class TicTacToe{
 
     private static char[][] grid = new char[3][3];
+	public static int turn;
     
     public TicTacToe(){
         fill(grid);
+		turn = 1;
     }
 
     public void fill(char[][] grid){
