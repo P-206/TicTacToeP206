@@ -1,10 +1,15 @@
 package is.ru.TicTacToe;
 
+import is.ru.TicTacToe.TicTacToeMainLogic;
+import is.ru.TicTacToe.TicTacToeUI;
+import is.ru.TicTacToe.TicTacToeRepo;
+
+
 public class TicTacToe{
 
-    private static char[][] grid = new char[3][3];
+    public static char[][] grid = new char[3][3];
 	public static int turn;
-    
+	
     public TicTacToe(){
         fill(grid);
 		turn = 1;
