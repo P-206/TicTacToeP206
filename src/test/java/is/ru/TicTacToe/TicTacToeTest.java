@@ -13,19 +13,19 @@ public class TicTacToeTest {
 	public void testGrid() {
 		Game game = new Game();
 		assertEquals('-', game.checkGrid(0,0));
-		/*assertEquals('-', game.checkGrid(0,1));
+		assertEquals('-', game.checkGrid(0,1));
 		assertEquals('-', game.checkGrid(0,2));
 		assertEquals('-', game.checkGrid(1,0));
 		assertEquals('-', game.checkGrid(1,1));
 		assertEquals('-', game.checkGrid(1,2));
 		assertEquals('-', game.checkGrid(2,0));
 		assertEquals('-', game.checkGrid(2,1));
-		assertEquals('-', game.checkGrid(2,2));	*/
+		assertEquals('-', game.checkGrid(2,2));
 	}
 	
 	@Test
 	public void checkTurn() {
-		Game game = new Game();
+		Build game = new Build();
 		int temp = game.turn;
 		assertEquals(1, temp);
 	}
