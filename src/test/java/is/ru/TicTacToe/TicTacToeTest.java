@@ -30,6 +30,13 @@ public class TicTacToeTest {
 		int temp = game.turn;
 		assertEquals(1, temp);
 	}
+	
+	@Test
+	public void checkMove(){
+		Build game = new Build();
+		int temp = game.turn;
+		assertEquals(1, temp);
+	}
 
 	@Test
 	public void checkTurn1(){
