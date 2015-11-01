@@ -11,7 +11,7 @@ public class TicTacToeTest {
 
 	@Test
 	public void testGrid() {
-		TicTacToe game = new TicTacToe();
+		TicTacToeGame game = new TicTacToeGame();
 		assertEquals('-', game.checkGrid(0,0));
 		assertEquals('-', game.checkGrid(0,1));
 		assertEquals('-', game.checkGrid(0,2));
@@ -25,7 +25,7 @@ public class TicTacToeTest {
 	
 	@Test
 	public void checkTurn() {
-		TicTacToe game = new TicTacToe();
+		TicTacToeGame game = new TicTacToeGame();
 		int temp = game.turn;
 		assertEquals(1, temp);
 	}
