@@ -6,12 +6,20 @@ public class Build{
     public static String player1;
     public static String player2;
     public static char[][] grid;
-    public static int turn;
+    public static boolean[] availeble_slots;
+    public static char turn;
+    public static int counter;
+    public static char winner;
+    public static boolean gameOver;
 
     public Build(){
         grid = new char[boardSize][boardSize];
         fill(grid);
-        turn = 1;
+        turn = 'X';
+        availeble_slots = new boolean[] {true, true , true , true, true, true, true, true, true};
+        counter = 0;
+        winner = '-';
+        gameOver = false;
     }
 
     private void fill(char[][] grid){

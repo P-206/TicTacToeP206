@@ -26,13 +26,13 @@ public class TicTacToeTest {
 	
 	@Test
 	public void checkBuildWorldInitializer(){
-		Build grid = new Build();
+		Build world = new Build();
 		Game game = new Game();
-		assertEquals(3, game.boardSize);
-		assertEquals('X', game.turn);
-		assertEquals(0, game.counter);
-		assertEquals('-', game.winner);
-		assertEquals(false, game.gameOver);
+		assertEquals(3, world.boardSize);
+		assertEquals('X', world.turn);
+		assertEquals(0, world.counter);
+		assertEquals('-', world.winner);
+		assertEquals(false, world.gameOver);
 	}
 	
 	@Test
