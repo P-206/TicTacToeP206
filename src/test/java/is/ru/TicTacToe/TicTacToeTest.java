@@ -25,6 +25,17 @@ public class TicTacToeTest {
 	}
 	
 	@Test
+	public void checkBuildWorldInitializer(){
+		Build world = new Build();
+		Game game = new Game();
+		assertEquals(3, world.boardSize);
+		assertEquals('X', world.turn);
+		assertEquals(0, world.counter);
+		assertEquals('-', world.winner);
+		assertEquals(false, world.gameOver);
+	}
+	
+	@Test
 	public void checkTurn(){
 		Build game = new Build();
 		int temp = game.turn;

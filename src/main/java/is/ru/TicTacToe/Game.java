@@ -23,7 +23,7 @@ public class Game{
     }
 
     public static void play(){
-        play(Build.turn);
+        //play(Build.turn);
     }
 
     private static void play(char player_turn){
