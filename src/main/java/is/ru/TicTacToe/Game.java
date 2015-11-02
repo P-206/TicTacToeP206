@@ -33,7 +33,6 @@ public class Game{
         System.out.println("Select slot 1 - 9");
         print(Build.grid);
         move(player_turn, 0); 
-		
     }
 
     private static void print(char [][] grid){
@@ -116,6 +115,8 @@ public class Game{
             Build.availeble_slots[num - 1] = false;
             Build.turn = changeTurn(player_turn);
         }
+		
+		Build.counter++;
     }
 
 	public static void main(String[] args){

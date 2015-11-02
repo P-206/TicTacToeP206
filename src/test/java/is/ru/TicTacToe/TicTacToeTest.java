@@ -42,4 +42,14 @@ public class TicTacToeTest {
 		game.moveTest(world.turn, 1);
 		assertEquals('X', game.checkGrid(0,0));
 	}
+	
+	@Test
+	public void testCounterIncrease(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 3);
+		assertEquals(3, world.counter);
+	}
 }
