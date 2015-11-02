@@ -52,4 +52,31 @@ public class TicTacToeTest {
 		game.moveTest(world.turn, 3);
 		assertEquals(3, world.counter);
 	}
+	
+	@Test
+	public void testCheckWinner(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 3);
+		game.moveTest(world.turn, 4);
+		game.moveTest(world.turn, 5);
+		game.moveTest(world.turn, 6);
+		game.moveTest(world.turn, 7);
+		game.moveTest(world.turn, 8);
+		game.moveTest(world.turn, 9);
+		assertEquals('X', game.checkWin());
+	}
+	
+	@Test
+	public void testCheckWinner2(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 3);
+		assertEquals('-', game.checkWin());
+	}
+	
 }
