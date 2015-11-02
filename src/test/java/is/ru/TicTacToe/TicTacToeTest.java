@@ -24,6 +24,28 @@ public class TicTacToeTest {
 		assertEquals('-', game.checkGrid(2,2));
 	}
 	
+	public static int boardSize = 3;
+    public static String player1;
+    public static String player2;
+    public static char[][] grid;
+    public static boolean[] availeble_slots;
+    public static char turn;
+    public static int counter;
+    public static char winner;
+    public static boolean gameOver;
+	
+	
+	@Test
+	public void checkBuildWorldInitializer(){
+		Build grid = new Build();
+		Game game = new Game();
+		assertEquals(3, game.boardSize);
+		assertEquals('X', game.turn);
+		assertEquals(0, game.counter);
+		assertEquals('-', game.winner);
+		assertEquals(false, game.gameOver);
+	}
+	
 	@Test
 	public void checkTurn(){
 		Build game = new Build();
