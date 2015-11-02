@@ -35,24 +35,4 @@ public class TicTacToeTest {
 		assertEquals(false, world.gameOver);
 	}
 	
-	@Test
-	public void checkTurn(){
-		Build game = new Build();
-		int temp = game.turn;
-		assertEquals(1, temp);
-	}
-	
-	@Test
-	public void checkMove(){
-		Build game = new Build();
-		int temp = game.turn;
-		assertEquals(1, temp);
-	}
-
-	@Test
-	public void checkTurn1(){
-		Build grid = new Build();
-		Game game = new Game();
-		assertEquals(0, game.changeTurn(grid.turn));
-	}
 }
