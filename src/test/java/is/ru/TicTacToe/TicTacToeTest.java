@@ -120,12 +120,29 @@ public class TicTacToeTest {
 		assertEquals('X', game.checkWin());
 	}
 
+
+	//O O X
+	//- - X
+	//- - X
+	//Test check if middle horizontal (X)
+	@Test
+	public void testCheckWinner5(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 3);
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 6);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 9);
+		assertEquals('X', game.checkWin());
+	}
+
 	//X O X
 	//- - -
 	//- - -
 	//Test checks if winner has not emerged.
 	@Test
-	public void testCheckWinner5(){
+	public void testCheckWinner6(){
 		Build world = new Build();
 		Game game = new Game();
 		game.moveTest(world.turn, 1);
