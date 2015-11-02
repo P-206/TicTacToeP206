@@ -32,7 +32,18 @@ public class Game{
         System.out.println("Player turn: " + player_turn);
         System.out.println("Select slot 1 - 9");
         print(Build.grid);
-        move(player_turn, 0); 
+        move(player_turn, 0);
+		Build.winner = checkWin(Build.grid);
+        if(Build.winner != '-'){
+            print(Build.grid);
+            System.out.println("Player " + Build.winner + " Wins!");
+            Build.gameOver = true;
+        }
+        if(Build.counter >= 9){
+            print(Build.grid);
+            System.out.println("It's tie!\nBoth players must be very smart!");
+            Build.gameOver = true;
+        }		
     }
 
     private static void print(char [][] grid){
