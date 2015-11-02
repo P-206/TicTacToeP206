@@ -35,4 +35,11 @@ public class TicTacToeTest {
 		assertEquals(false, world.gameOver);
 	}
 	
+	@Test
+	public void testMove(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		assertEquals('X', game.checkGrid(0,0));
+	}
 }
