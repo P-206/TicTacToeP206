@@ -150,5 +150,25 @@ public class TicTacToeTest {
 		game.moveTest(world.turn, 3);
 		assertEquals('-', game.checkWin());
 	}
+
+	//X O X
+	//O X O
+	//O X X
+	//Test checks if winner has not emerged.
+	@Test
+	public void testCheckTie(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 3);
+		game.moveTest(world.turn, 4);
+		game.moveTest(world.turn, 5);
+		game.moveTest(world.turn, 6);
+		game.moveTest(world.turn, 8);
+		game.moveTest(world.turn, 7);
+		game.moveTest(world.turn, 9);
+		assertEquals(9, world.counter);
+	}
 	
 }

@@ -119,7 +119,7 @@ public class Game{
 		Build.counter++;
     }
 	
-	   public static char checkWin(){
+	public static char checkWin(){
         return checkWin(Build.grid);
     }
 
