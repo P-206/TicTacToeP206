@@ -53,6 +53,11 @@ public class TicTacToeTest {
 		assertEquals(3, world.counter);
 	}
 	
+
+	//X O X
+	//O X O
+	//X - -
+	//Test check diagonal left to right (X)
 	@Test
 	public void testCheckWinner(){
 		Build world = new Build();
@@ -64,19 +69,106 @@ public class TicTacToeTest {
 		game.moveTest(world.turn, 5);
 		game.moveTest(world.turn, 6);
 		game.moveTest(world.turn, 7);
-		game.moveTest(world.turn, 8);
+		assertEquals('X', game.checkWin());
+	}
+
+	//X O O
+	//- X -
+	//- - X
+	//Test check diagonal left to right (X)
+	@Test
+	public void testCheckWinner1(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 5);
+		game.moveTest(world.turn, 3);
 		game.moveTest(world.turn, 9);
 		assertEquals('X', game.checkWin());
 	}
-	
+
+	//X - O
+	//X - O
+	//X - -
+	//Test check left horizontal (X)
 	@Test
-	public void testCheckWinner2(){
+	public void testCheckWinner3(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 3);
+		game.moveTest(world.turn, 4);
+		game.moveTest(world.turn, 6);
+		game.moveTest(world.turn, 7);
+		assertEquals('X', game.checkWin());
+	}
+
+	//O X O
+	//- X -
+	//- X -
+	//Test check if middle horizontal (X)
+	@Test
+	public void testCheckWinner4(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 5);
+		game.moveTest(world.turn, 3);
+		game.moveTest(world.turn, 8);
+		assertEquals('X', game.checkWin());
+	}
+
+
+	//O O X
+	//- - X
+	//- - X
+	//Test check if middle horizontal (X)
+	@Test
+	public void testCheckWinner5(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 3);
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 6);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 9);
+		assertEquals('X', game.checkWin());
+	}
+
+	//X O X
+	//- - -
+	//- - -
+	//Test checks if winner has not emerged.
+	@Test
+	public void testCheckWinner6(){
 		Build world = new Build();
 		Game game = new Game();
 		game.moveTest(world.turn, 1);
 		game.moveTest(world.turn, 2);
 		game.moveTest(world.turn, 3);
 		assertEquals('-', game.checkWin());
+	}
+
+	//X O X
+	//O X O
+	//O X X
+	//Test checks if winner has not emerged.
+	@Test
+	public void testCheckTie(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 3);
+		game.moveTest(world.turn, 4);
+		game.moveTest(world.turn, 5);
+		game.moveTest(world.turn, 6);
+		game.moveTest(world.turn, 8);
+		game.moveTest(world.turn, 7);
+		game.moveTest(world.turn, 9);
+		assertEquals(9, world.counter);
 	}
 	
 }
