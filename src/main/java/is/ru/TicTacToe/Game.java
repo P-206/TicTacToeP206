@@ -33,7 +33,6 @@ public class Game{
         System.out.println("Select slot 1 - 9");
         print(Build.grid);
         move(player_turn, 0); 
-		
     }
 
     private static void print(char [][] grid){
@@ -116,6 +115,52 @@ public class Game{
             Build.availeble_slots[num - 1] = false;
             Build.turn = changeTurn(player_turn);
         }
+		
+		Build.counter++;
+    }
+	
+	   public static char checkWin(){
+        return checkWin(Build.grid);
+    }
+
+    private static char checkWin(char [][] grid){
+
+        // Check horizontal matches
+        if((grid[0][0] == grid[0][1] && grid[0][0] == grid[0][2]) && grid[0][0] != '-'){
+            return grid[0][0];
+        }
+
+        if((grid[1][0] == grid[1][1] && grid[1][0] == grid[1][2]) && grid[1][0] != '-'){
+            return grid[1][0];
+        }
+
+        if((grid[2][0] == grid[2][1] && grid[2][0] == grid[2][2]) && grid[2][0] != '-'){
+            return grid[2][0];
+        }
+
+        // Check vertical matches
+        if((grid[0][0] == grid[1][0] && grid[0][0] == grid[2][0]) && grid[0][0] != '-'){
+            return grid[0][0];
+        }
+
+        if((grid[0][1] == grid[1][1] && grid[0][1] == grid[2][1]) && grid[0][1] != '-'){
+            return grid[0][1];
+        }
+
+        if((grid[0][2] == grid[1][2] && grid[0][2] == grid[2][2]) && grid[0][2] != '-'){
+            return grid[0][2];
+        }
+
+        // Check cross matches
+        if((grid[0][0] == grid[1][1] && grid[0][0] == grid[2][2]) && grid[0][0] != '-'){
+            return grid[0][0];
+        }
+
+        if((grid[0][2] == grid[1][1] && grid[0][2] == grid[2][0]) && grid[0][2] != '-'){
+            return grid[0][2];
+        }
+
+        return '-';
     }
 
 	public static void main(String[] args){
