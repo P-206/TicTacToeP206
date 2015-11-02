@@ -1,6 +1,6 @@
-language: java
+language: java 
 jdk:
-	  	- oraclejdk8
-	  	- oraclejdk7
-	  	- openjdk6
-		-./gradlew check
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk6
+  - ./gradlew check
