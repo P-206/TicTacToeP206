@@ -53,6 +53,11 @@ public class TicTacToeTest {
 		assertEquals(3, world.counter);
 	}
 	
+
+	//X O X
+	//O X O
+	//X - -
+	//Test check
 	@Test
 	public void testCheckWinner(){
 		Build world = new Build();
@@ -64,11 +69,30 @@ public class TicTacToeTest {
 		game.moveTest(world.turn, 5);
 		game.moveTest(world.turn, 6);
 		game.moveTest(world.turn, 7);
-		game.moveTest(world.turn, 8);
+		assertEquals('X', game.checkWin());
+	}
+
+	//X O O
+	//- X -
+	//- - X
+	//Test check 
+	@Test
+	public void testCehcWinner1(){
+		Build world = new Build();
+		Game game = new Game();
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 5);
+		game.moveTest(world.turn, 3);
 		game.moveTest(world.turn, 9);
 		assertEquals('X', game.checkWin());
 	}
-	
+
+
+	//X O X
+	//- - -
+	//- - -
+	//Test checks if winner has not emerged.
 	@Test
 	public void testCheckWinner2(){
 		Build world = new Build();
