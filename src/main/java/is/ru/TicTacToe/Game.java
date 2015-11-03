@@ -48,6 +48,11 @@ public class Game{
         }
     }
 
+
+    public static String sendPlayerNameTest(char playerTurn){
+        return sendPlayerName(playerTurn);
+    }
+
     private static String sendPlayerName(char playerTurn){
         String playa;
         if(playerTurn == 'X') playa = Build.player1;
@@ -237,6 +242,10 @@ public class Game{
         System.out.printf("Player %s has a winning ratio of %.2f %% or %d victories.\n", Build.player1, player1WinRatio, Build.player1Wins);
         System.out.printf("Player %s has a winning ratio of %.2f %% or %d victories.\n", Build.player2, player2WinRatio, Build.player2Wins);
         System.out.printf("Player %s and %s have a tie ratio of %.2f%% or %d ties.", Build.player1, Build.player2, tieRatio, Build.gameTies);
+    }
+
+    public static char returnPlayerTest(String player){      
+        return returnPlayer(player);
     }
 
     private static char returnPlayer(String player){
