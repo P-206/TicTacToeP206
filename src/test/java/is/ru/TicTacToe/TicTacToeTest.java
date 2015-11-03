@@ -304,6 +304,27 @@ public class TicTacToeTest {
 		assertEquals(33.33333333333333, game.ratioCalcTest('-', game.totalRoundsTest()), 0.1);
 	}
 
+	@Test
+	public void testReturnPlayer(){
+		Build world = new Build();
+		Game game = new Game();
+		world.player1 = "Jon";
+		world.player2 = "Thor";
+		assertEquals('X', game.returnPlayerTest(world.player1));
+		assertEquals('O', game.returnPlayerTest(world.player2));
+	}
+
+	@Test
+	public void testPlayerTurn(){
+		Build world = new Build();
+		Game game = new Game();
+		world.player1 = "Jon";
+		world.player2 = "Thor";
+		assertEquals("Jon", game.sendPlayerNameTest(world.turn));
+		world.turn = game.changeTurn(world.turn);
+		assertEquals("Thor", game.sendPlayerNameTest(world.turn));
+	}
+
 /*Showcase test*/
 /*
 	//X X O
