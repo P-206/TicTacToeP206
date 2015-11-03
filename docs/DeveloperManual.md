@@ -22,7 +22,7 @@ It is required for the TicTacToe to work properly is to use these software.
 All GitHub commands start with git. Other than you can follow this setup to get started with Git.
 * [Setup](https://help.github.com/articles/set-up-git/)
 
-### Accessing our assingment
+### Accessing our assignment
 Our project can be accessed through GitHub with the following command:
 
 ```sh
