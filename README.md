@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/P-206/TicTacToeP206.svg?branch=master)](https://travis-ci.org/P-206/TicTacToeP206)
+[![codecov.io](https://codecov.io/github/P-206/TicTacToeP206/coverage.svg?branch=master)](https://codecov.io/github/P-206/TicTacToeP206?branch=master)
+<a href="https://scan.coverity.com/projects/P-206-TicTacToeP206"><img alt="Coverity Scan Build Status" src="https://scan.coverity.com/projects/6761/badge.svg"/></a>
 
 <a href="https://codecov.io/github/P-206/TicTacToeP206">Code Coverage</a>
 # TicTacToeP206
