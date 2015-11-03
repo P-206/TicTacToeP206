@@ -91,7 +91,7 @@ public class TicTacToeTest {
 	//X - O
 	//X - O
 	//X - -
-	//Test check left horizontal (X)
+	//Test check left Vertical (X)
 	@Test
 	public void testCheckWinner3(){
 		Build world = new Build();
@@ -107,7 +107,7 @@ public class TicTacToeTest {
 	//O X O
 	//- X -
 	//- X -
-	//Test check if middle horizontal (X)
+	//Test check if middle Vertical (X)
 	@Test
 	public void testCheckWinner4(){
 		Build world = new Build();
@@ -124,7 +124,7 @@ public class TicTacToeTest {
 	//O O X
 	//- - X
 	//- - X
-	//Test check if middle horizontal (X)
+	//Test check if middle Vertical (X)
 	@Test
 	public void testCheckWinner5(){
 		Build world = new Build();
@@ -154,7 +154,7 @@ public class TicTacToeTest {
 	//O O O
 	//X X -
 	//- - -
-	//Test checks if winner has not emerged.
+	//Test checks horizontal top winner (0).
 	@Test
 	public void testCheckWinner7(){
 		Build world = new Build();
@@ -171,7 +171,7 @@ public class TicTacToeTest {
 	//X X -
 	//O O O
 	//- - -
-	//Test checks if winner has not emerged.
+	//Test checks horizontal middle winner (0).
 	@Test
 	public void testCheckWinner8(){
 		Build world = new Build();
@@ -182,6 +182,24 @@ public class TicTacToeTest {
 		game.moveTest(world.turn, 5);
 		game.moveTest(world.turn, 2);
 		game.moveTest(world.turn, 6);
+		assertEquals('O', game.checkWin());
+	}
+
+
+	//X X -
+	//- - -
+	//O O O
+	//Test checks horizontal bottom winner (0).
+	@Test
+	public void testCheckWinner8(){
+		Build world = new Build();
+		Game game = new Game();
+		world.turn = game.changeTurn(world.turn);
+		game.moveTest(world.turn, 7);
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 8);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 9);
 		assertEquals('O', game.checkWin());
 	}
 
