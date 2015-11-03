@@ -224,4 +224,84 @@ public class TicTacToeTest {
 		assertEquals(9, world.counter);
 	}
 	
+	@Test
+	public void testName1(){
+		Build world = new Build();
+		Game game = new Game();
+		game.selectNamesTest("Ari", "Vala");
+		assertEquals("Ari", world.player1);
+		assertEquals("Vala", world.player2);
+	}
+
+	@Test
+	public void testName2(){
+		Build world = new Build();
+		Game game = new Game();
+		game.selectNamesTest("", "");
+		assertEquals("X", world.player1);
+		assertEquals("O", world.player2);
+	}
+
+
+	@Test
+	public void winMessage1(){
+		Build world = new Build();
+		Game game = new Game();
+		assertEquals("It's tie!\nBoth players must be very smart!", game.findWinnerTest('-'));
+	}
+
+	@Test
+	public void winMessage2(){
+		Build world = new Build();
+		Game game = new Game();
+		world.winner = 'X';
+		game.selectNamesTest("", "");
+		assertEquals("Player X Wins!", game.findWinnerTest(world.winner));
+	}
+
+	@Test
+	public void winMessage3(){
+		Build world = new Build();
+		Game game = new Game();
+		world.winner = 'O';
+		game.selectNamesTest("", "");
+		assertEquals("Player O Wins!", game.findWinnerTest(world.winner));
+	}
+
+	@Test
+	public void winMessage4(){
+		Build world = new Build();
+		Game game = new Game();
+		world.winner = 'X';
+		game.selectNamesTest("Jon", "");
+		assertEquals("Player Jon Wins!", game.findWinnerTest(world.winner));
+	}
+
+	@Test
+	public void winMessage5(){
+		Build world = new Build();
+		Game game = new Game();
+		world.winner = 'O';
+		game.selectNamesTest("", "Orri");
+		assertEquals("Player Orri Wins!", game.findWinnerTest(world.winner));
+	}
+
+
+
+	//X X O
+	//- - O
+	//- - O
+	//Test check if right Vertical (O)
+	@Test
+	public void testCheckWinner10(){
+		Build world = new Build();
+		Game game = new Game();
+		world.turn = game.changeTurn(world.turn);
+		game.moveTest(world.turn, 3);
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 6);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 9);
+		assertEquals('O', game.checkWin());
+	}
 }
