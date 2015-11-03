@@ -19,6 +19,7 @@
 - **Game.java** (Contains the main logic for the game)
 - **TicTacToeTest.java** (Contains the tests we've built to make sure the programs runs accordingly)
 - **build.gradle** (The gradle build file that we used)
+- **docs** (Markdown files containing project report)
 
 ##Programming rules
 Java
