@@ -29,7 +29,7 @@ public class Game{
     }
 
     private static void play(char playerTurn){
-        System.out.printf("Player turn: %s", sendPlayerName(playerTurn));
+        System.out.printf("Player turn: %s\n", sendPlayerName(playerTurn));
         System.out.println("Select slot 1 - 9");
         print(Build.grid);
         move(playerTurn, 0);
@@ -279,4 +279,3 @@ public class Game{
         System.out.println("Good Game!");
         printStats();
     }
-}
