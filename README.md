@@ -11,6 +11,8 @@
 
 [Administration manual](docs/AdministratorManual.md)
 
+[Design report](docs/designReport.md)
+
 # TicTacToeP206
 *The game tick tack toe from P206*
 
