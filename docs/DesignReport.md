@@ -1,8 +1,3 @@
-
-# TicTacToeP206
-*The game tick tack toe from P206*
-
-#Design
 In this report we will present to you a documentation of our project in Software Engineering. This will shed a light on the design of our TicTacToe game. This brief summary also goes over the project content, coding and all around the main pieces of the project. 
 With this documentation we make project goals, vision and all around devolopement clearer. Both members of the team and other individuals reviewing our work will get a much deeper understanding of how we go about doing this application. Time mananagement is easier with a project report and developers get specific things to work on.
 
@@ -39,7 +34,7 @@ public static void play(){
 }
 ```
 
-##Graphic design
+##Design
 For graphics we had no special design we wanted to make, we just wanted to keep it simple and try to follow the assingments instructions regarding the whole implementation. So unfortunately we have no early stage prototypes. We make up for our lack of design with hopefully better code and work.
 
 ### Project infrastructure
@@ -57,3 +52,5 @@ Like we stated before we Used Test Driven Develpement for the business logic. Th
 The assingment features a few extra points teams can get aside from using markdown for our work documentation. We sought-after few of those including using automated continuous integration server, the Teacher recommended using Travis and so we did.
 Travis automates triggering a build and test upon each integration and makes detection of a potential integration bug easier.
 
+## Team Culture
+P-206 consist of 6 developers. The team uses SCRUM method to develop the project. We give each member a specific role, f.ex. product owner, scrum master and developers.
