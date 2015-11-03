@@ -5,6 +5,9 @@ public class Build{
     public static int boardSize = 3;
     public static String player1;
     public static String player2;
+    public static int player1Wins = 0;
+    public static int player2Wins = 0;
+    public static int gameTies = 0;
     public static char[][] grid;
     public static boolean[] availeble_slots;
     public static char turn;

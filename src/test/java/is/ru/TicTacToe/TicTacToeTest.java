@@ -288,6 +288,8 @@ public class TicTacToeTest {
 
 
 
+/*Showcase test*/
+/*
 	//X X O
 	//- - O
 	//- - O
@@ -304,4 +306,5 @@ public class TicTacToeTest {
 		game.moveTest(world.turn, 9);
 		assertEquals('O', game.checkWin());
 	}
+*/
 }
