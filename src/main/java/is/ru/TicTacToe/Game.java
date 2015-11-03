@@ -231,13 +231,22 @@ public class Game{
 
     public static void printStats(){
         double totalRounds = totalRounds();
-        double player1WinRatio = ratioCalc(Build.player1.charAt(0), totalRounds);
-        double player2WinRatio = ratioCalc(Build.player2.charAt(0), totalRounds);
+        double player1WinRatio = ratioCalc(returnPlayer(Build.player1), totalRounds);
+        double player2WinRatio = ratioCalc(returnPlayer(Build.player2), totalRounds);
         double tieRatio = ratioCalc('-', totalRounds);
         System.out.printf("Player %s has a winning ratio of %.2f %% or %d victories.\n", Build.player1, player1WinRatio, Build.player1Wins);
         System.out.printf("Player %s has a winning ratio of %.2f %% or %d victories.\n", Build.player2, player2WinRatio, Build.player2Wins);
         System.out.printf("Player %s and %s have a tie ratio of %.2f%% or %d ties.", Build.player1, Build.player2, tieRatio, Build.gameTies);
     }
+
+    private static char returnPlayer(String player){
+        char tmp;
+        if(Build.player1 == player ) tmp = 'X';
+        else tmp = 'O';
+        
+        return tmp;
+    }
+
 
     public static double totalRoundsTest(){
         return totalRounds();
@@ -279,3 +288,4 @@ public class Game{
         System.out.println("Good Game!");
         printStats();
     }
+}
