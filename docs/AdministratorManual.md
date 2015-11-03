@@ -5,7 +5,7 @@
 ## Requirements
 Our application is hosted as an open repository on github.com on the following url: https://github.com/P-206/TicTacToeP206.
 To clone the git repository to your machine use:
-git clone https://github.com/P-206/TicTacToeP206.
+***git clone https://github.com/P-206/TicTacToeP206.***
 
 ## Getting Started
 
