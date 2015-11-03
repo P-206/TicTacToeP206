@@ -14,14 +14,15 @@ In the project we followed the assingment's instructions, some of them included:
 
 ### Software Requirements
 It is required for the TicTacToe to work properly is to use these software.
-* [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Gradle](https://docs.gradle.org/current/userguide/installation.html)
 
 ### Using GitHub
+All GitHub commands start with git. Other than you can follow this setup to get started with Git.
+* [Setup](https://help.github.com/articles/set-up-git/)
 
-
-### Access our assingment
+### Accessing our assingment
 Our project can be accessed through GitHub with the following command:
 
 ```sh
