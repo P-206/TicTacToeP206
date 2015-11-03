@@ -2,10 +2,6 @@ package is.ru.TicTacToe;
 
 import java.util.Scanner;
 
-/**
- * Created by sveinn on 3.11.2015.
- */
-
 public class Game{
 
     public Game(){
@@ -32,11 +28,11 @@ public class Game{
         }while(!Build.gameOver);
     }
 
-    private static void play(char player_turn){
-        System.out.println("Player turn: " + player_turn);
+    private static void play(char playerTurn){
+        System.out.printf("Player turn: %s", sendPlayerName(playerTurn));
         System.out.println("Select slot 1 - 9");
         print(Build.grid);
-        move(player_turn, 0);
+        move(playerTurn, 0);
         Build.winner = checkWin(Build.grid);
         if(Build.winner != '-'){
             print(Build.grid);
@@ -52,6 +48,14 @@ public class Game{
         }
     }
 
+    private static String sendPlayerName(char playerTurn){
+        String playa;
+        if(playerTurn == 'X') playa = Build.player1;
+        else playa = Build.player2;
+
+        return playa;
+    }
+
     public static String findWinnerTest(char winner){
         return findWinner(winner);
     }
@@ -59,9 +63,8 @@ public class Game{
     private static String findWinner(char winner){
         String win;
         if(winner == '-') win = "It's tie!\nBoth players must be very smart!";
-        else if(winner == 'X' && !Build.player1.isEmpty()) win = "Player " + Build.player1 + " Wins!";
-        else if (winner == 'O' && !Build.player2.isEmpty()) win = "Player " + Build.player2 + " Wins!";
-        else win = "Player " + Build.winner + " Wins!";
+        else if(winner == 'X') win = "Player " + Build.player1 + " Wins!";
+        else  win = "Player " + Build.player2 + " Wins!";
 
         return win;
     }
@@ -217,7 +220,7 @@ public class Game{
     }
 
     public static void gatherStatsTest(char result){
-    	gatherStats(result);
+        gatherStats(result);
     }
 
     private static void gatherStats(char result){
@@ -231,21 +234,21 @@ public class Game{
         double player1WinRatio = ratioCalc(Build.player1.charAt(0), totalRounds);
         double player2WinRatio = ratioCalc(Build.player2.charAt(0), totalRounds);
         double tieRatio = ratioCalc('-', totalRounds);
-        System.out.printf("Player %S has a winning ratio of %.2f %% or %d victories.\n", Build.player1, player1WinRatio, Build.player1Wins);
-        System.out.printf("Player %S has a winning ratio of %.2f %% or %d victories.\n", Build.player2, player2WinRatio, Build.player2Wins);
-        System.out.printf("Player %S and %S have a tie ratio of %.2f%% or %d ties.", Build.player1, Build.player2, tieRatio, Build.gameTies);
+        System.out.printf("Player %s has a winning ratio of %.2f %% or %d victories.\n", Build.player1, player1WinRatio, Build.player1Wins);
+        System.out.printf("Player %s has a winning ratio of %.2f %% or %d victories.\n", Build.player2, player2WinRatio, Build.player2Wins);
+        System.out.printf("Player %s and %s have a tie ratio of %.2f%% or %d ties.", Build.player1, Build.player2, tieRatio, Build.gameTies);
     }
 
     public static double totalRoundsTest(){
-    	return totalRounds();
+        return totalRounds();
     }
 
     private static double totalRounds(){
         return Build.player1Wins + Build.player2Wins + Build.gameTies;
     }
 
-	public static double ratioCalcTest(char playerIndicator, double totalRounds){
-		return ratioCalc(playerIndicator, totalRounds);
+    public static double ratioCalcTest(char playerIndicator, double totalRounds){
+        return ratioCalc(playerIndicator, totalRounds);
     }
 
 
