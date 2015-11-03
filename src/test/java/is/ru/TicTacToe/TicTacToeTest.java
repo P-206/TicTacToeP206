@@ -191,7 +191,7 @@ public class TicTacToeTest {
 	//O O O
 	//Test checks horizontal bottom winner (0).
 	@Test
-	public void testCheckWinner8(){
+	public void testCheckWinner9(){
 		Build world = new Build();
 		Game game = new Game();
 		world.turn = game.changeTurn(world.turn);
