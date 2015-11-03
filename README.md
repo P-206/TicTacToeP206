@@ -7,6 +7,9 @@
 
 <a href="https://codecov.io/github/P-206/TicTacToeP206">Code Coverage</a>
 
+[Developers manual](docs/DeveloperManual.md)
+
+[Administration manual](docs/AdministratorManual.md)
 
 # TicTacToeP206
 *The game tick tack toe from P206*
