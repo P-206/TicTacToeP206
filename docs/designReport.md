@@ -2,6 +2,13 @@
 # TicTacToeP206
 *The game tick tack toe from P206*
 
+#Design
+In this report we will present to you a documentation of our project in Software Engineering. The assingment stated that using Markdown would deliver us a extra point, we also found that the plain document texting made project goals, vision and all around devolopement clear.
+
+##Extra points
+The assingment features a few extra points teams can get aside from using markdown for our work documentation. We sought-after few of those including using automated continuous integration server, the Teacher recommended using Travis and so we did.
+Travis automates triggering a build and test upon each integration and makes detection of a potential integration bug easier.
+
 
 ## Project content
 - **Build.java** (Builds the world and contains variables that game.java has access to)
