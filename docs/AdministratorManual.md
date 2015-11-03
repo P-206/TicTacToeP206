@@ -16,6 +16,16 @@ $ git clone [https://github.com/P-206/TicTacToeP206.git]
 ```
 
 ## Getting Started
+After you clone the project you do the following.
+```sh
+$ gradle build
+```
+```sh
+$ cd build/libs/
+```
+```sh
+$ java -jar TicTacToeP206-0.0.1.jar
+```
 
 ## Team Culture
 P-206 consist of 6 developers. The team uses SCRUM method to develop the project. We give each member a specific role, f.ex. product owner, scrum master and developers.
