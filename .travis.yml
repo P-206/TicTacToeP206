@@ -8,3 +8,19 @@ before_install:
 
 after_success:
 - codecov
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "fpeVQWYoUV2A+oQKU/7Pao0LHYrBOy+5DJ25eWA3+cmU+Isw4+9x/i8TssXmb7n+vNqF+EV0Gi0X+j/O7U8ZtRes/h5lAcldrsWcg92OJs4wPlBQKv3lKpWW17Idr1BMMksgxnvvqKwrP+vl1v1D8NJfvMRQ5VQSqH0nGldKVdRY82nf5JncCIw+30KY+KPoHlL3p0GhRgSyHWvOAU9ltMJ1ebQ41M+fxPsYLMDLkAJZccWKY7J/CI7KKP3CESd0h8EzJwvqQWBo3/vlZ4ISRryhmuPAfjZXs5Yk/JHs5xEfxPAXkxj05gu0214t0E5D7xoZ3+U81s1VJwQpVQsKNvfarKUdmaAZbR7J3yF5t14R50iW6AjqJpOnzGz3mp+Htv+RSLduXdz1hZ5PEODo7Z3quTX0MA0VhqRlMPakHdf/R4jk+9GuXMvtIKA4eCHmKFi5dmbSwA+s1Ca2SIjjkKk19do/tjSSX2QCi1z5Vd2O05zYhkmzSg1etQ6c5UjuZ50dGoRwdbH8mKPauKcRQY1Jk0210/SZzKyrF4DQG667hLf5odS9dk6eTBoDL61V3SRH7tL+aYR4zjfZXH/zYx8tdjezOoxHKizMi4m7S/BbMcsCUW6k2p+Kb5TXfYhDDeHco/Zs1XFhIl/th4ZuK+U/kVMIi0gRGQTRYuH3+Ys="
+
+addons:
+  coverity_scan:
+    project:
+      name: "P-206/TicTacToeP206"
+      description: "Build submitted via Travis CI"
+    notification_email: sveinnt14@ru.is
+    build_command_prepend: "gradle clean"
+    build_command:   "gradle build"
+    branch_pattern: coverity_scan
