@@ -151,6 +151,24 @@ public class TicTacToeTest {
 		assertEquals('-', game.checkWin());
 	}
 
+	//O O O
+	//X X -
+	//- - -
+	//Test checks if winner has not emerged.
+	@Test
+	public void testCheckWinner7(){
+		Build world = new Build();
+		Game game = new Game();
+		world.turn = game.changeTurn(world.turn);
+		game.moveTest(world.turn, 1);
+		game.moveTest(world.turn, 4);
+		game.moveTest(world.turn, 2);
+		game.moveTest(world.turn, 5);
+		game.moveTest(world.turn, 3);
+		assertEquals('O', game.checkWin());
+	}
+
+
 	//X O X
 	//O X O
 	//O X X
