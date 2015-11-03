@@ -1,3 +1,4 @@
+#Report
 In this report we will present to you a documentation of our project in Software Engineering. This will shed a light on the design of our TicTacToe game. This brief summary also goes over the project content, coding and all around the main pieces of the project. 
 With this documentation we make project goals, vision and all around devolopement clearer. Both members of the team and other individuals reviewing our work will get a much deeper understanding of how we go about doing this application. Time mananagement is easier with a project report and developers get specific things to work on.
 
