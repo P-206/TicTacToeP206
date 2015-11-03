@@ -11,7 +11,7 @@
 
 [Administration manual](docs/AdministratorManual.md)
 
-[Design report](docs/designReport.md)
+[Design report](docs/DesignReport.md)
 
 <a href="https://travis-ci.org/P-206/TicTacToeP206">Travis CI</a>
 
