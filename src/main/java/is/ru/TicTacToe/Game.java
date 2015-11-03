@@ -2,6 +2,10 @@ package is.ru.TicTacToe;
 
 import java.util.Scanner;
 
+/**
+ * Created by sveinn on 3.11.2015.
+ */
+
 public class Game{
 
     public Game(){
@@ -23,27 +27,43 @@ public class Game{
     }
 
     public static void play(){
-		do{
-			play(Build.turn);
-			}while(!Build.gameOver);
+        do{
+            play(Build.turn);
+        }while(!Build.gameOver);
     }
 
-	private static void play(char player_turn){
+    private static void play(char player_turn){
         System.out.println("Player turn: " + player_turn);
         System.out.println("Select slot 1 - 9");
         print(Build.grid);
         move(player_turn, 0);
-		Build.winner = checkWin(Build.grid);
+        Build.winner = checkWin(Build.grid);
         if(Build.winner != '-'){
             print(Build.grid);
-            System.out.println("Player " + Build.winner + " Wins!");
+            System.out.println(findWinner(Build.winner));
             Build.gameOver = true;
+            gatherStats(Build.winner);
         }
         if(Build.counter >= 9){
             print(Build.grid);
-            System.out.println("It's tie!\nBoth players must be very smart!");
+            System.out.println(findWinner(Build.winner));
             Build.gameOver = true;
-        }		
+            gatherStats(Build.winner);
+        }
+    }
+
+    public static String findWinnerTest(char winner){
+        return findWinner(winner);
+    }
+
+    private static String findWinner(char winner){
+        String win;
+        if(winner == '-') win = "It's tie!\nBoth players must be very smart!";
+        else if(winner == 'X' && !Build.player1.isEmpty()) win = "Player " + Build.player1 + " Wins!";
+        else if (winner == 'O' && !Build.player2.isEmpty()) win = "Player " + Build.player2 + " Wins!";
+        else win = "Player " + Build.winner + " Wins!";
+
+        return win;
     }
 
     private static void print(char [][] grid){
@@ -54,12 +74,12 @@ public class Game{
             System.out.println();
         }
     }
-	
-	public static void moveTest(char player_turn, int x){
+
+    public static void moveTest(char player_turn, int x){
         move(player_turn, x);
     }
-	
-	private static void move(char player_turn, int x){
+
+    private static void move(char player_turn, int x){
         Scanner in = new Scanner(System.in);
         int num = x;
         int temp = 0;
@@ -126,11 +146,11 @@ public class Game{
             Build.availeble_slots[num - 1] = false;
             Build.turn = changeTurn(player_turn);
         }
-		
-		Build.counter++;
+
+        Build.counter++;
     }
-	
-	public static char checkWin(){
+
+    public static char checkWin(){
         return checkWin(Build.grid);
     }
 
@@ -174,17 +194,86 @@ public class Game{
         return '-';
     }
 
-	public static void main(String[] args){
-        Build world;
-        System.out.println("Welcome to TicTacToe");
+    public static void selectNamesTest(String name1, String name2){
+        selectNames(name1, name2);
+    }
+
+    private static void selectNames(String name1, String name2){
+        if(!name1.isEmpty()) Build.player1 = name1;
+        else Build.player1 = "X";
+
+        if(!name2.isEmpty()) Build.player2 = name2;
+        else Build.player2 = "O";
+    }
+
+    public static void chooseNames(){
         Scanner in = new Scanner(System.in);
+        String name1, name2;
+        System.out.println("Player1\nType your name:\n" + "Press enter for default name.");
+        name1 = in.nextLine();
+        System.out.println("Player2\nType your name:\n" + "Press enter for default name.");
+        name2 = in.nextLine();
+        selectNames(name1, name2);
+    }
+
+    public static void gatherStatsTest(char result){
+    	gatherStats(result);
+    }
+
+    private static void gatherStats(char result){
+        if(result == 'X') Build.player1Wins += 1;
+        else if(result == 'O') Build.player2Wins += 1;
+        else Build.gameTies += 1;
+    }
+
+    public static void printStats(){
+        double totalRounds = totalRounds();
+        double player1WinRatio = ratioCalc(Build.player1.charAt(0), totalRounds);
+        double player2WinRatio = ratioCalc(Build.player2.charAt(0), totalRounds);
+        double tieRatio = ratioCalc('-', totalRounds);
+        System.out.printf("Player %S has a winning ratio of %.2f %% or %d victories.\n", Build.player1, player1WinRatio, Build.player1Wins);
+        System.out.printf("Player %S has a winning ratio of %.2f %% or %d victories.\n", Build.player2, player2WinRatio, Build.player2Wins);
+        System.out.printf("Player %S and %S have a tie ratio of %.2f%% or %d ties.", Build.player1, Build.player2, tieRatio, Build.gameTies);
+    }
+
+    public static double totalRoundsTest(){
+    	return totalRounds();
+    }
+
+    private static double totalRounds(){
+        return Build.player1Wins + Build.player2Wins + Build.gameTies;
+    }
+
+	public static double ratioCalcTest(char playerIndicator, double totalRounds){
+		return ratioCalc(playerIndicator, totalRounds);
+    }
+
+
+    private static double ratioCalc(char playerIndicator, double totalRounds){
+        double tmp = 0;
+        if(playerIndicator == 'X') tmp = (Build.player1Wins/totalRounds)*100;
+
+        if(playerIndicator == 'O') tmp = (Build.player2Wins/totalRounds)*100;
+
+        if(playerIndicator == '-') tmp = (Build.gameTies/totalRounds)*100;
+
+        return tmp;
+    }
+
+    public static void main(String[] args){
+        Build world;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Welcome to TicTacToe");
+        chooseNames();
         char cont = 'y';
         do{
             world = new Build();
             play();
             System.out.println("Press Y and hit Enter to play again!");
+            System.out.println("Press any other key and hit Enter to quit!");
             cont = in.next().charAt(0);
         }while(cont == 'y' || cont == 'Y');
         System.out.println("Good Game!");
+        printStats();
     }
 }
