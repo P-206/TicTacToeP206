@@ -26,6 +26,7 @@ $ cd build/libs/
 ```sh
 $ java -jar TicTacToeP206-0.0.1.jar
 ```
+Then the game TicTacToe is one. You should then input your name and your opponent name.
 
 ## Team Culture
 P-206 consist of 6 developers. The team uses SCRUM method to develop the project. We give each member a specific role, f.ex. product owner, scrum master and developers.
