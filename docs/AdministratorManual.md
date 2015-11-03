@@ -7,6 +7,7 @@ The software required to manage this project are as follows:
 * [Travis - CI](https://github.com/travis-ci/travis.rb)
 * [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Gradle](https://docs.gradle.org/current/userguide/installation.html)
+
 ## Requirements
 Our application is hosted as an open repository on github.com on the following url: https://github.com/P-206/TicTacToeP206.
 To clone the git repository to your machine use:
