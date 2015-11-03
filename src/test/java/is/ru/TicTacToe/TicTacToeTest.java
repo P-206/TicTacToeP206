@@ -286,7 +286,23 @@ public class TicTacToeTest {
 		assertEquals("Player Orri Wins!", game.findWinnerTest(world.winner));
 	}
 
-
+	@Test
+	public void testGatherStats(){
+		Build world = new Build();
+		Game game = new Game();
+		game.gatherStatsTest('X');
+		game.gatherStatsTest('X');
+		game.gatherStatsTest('X');
+		game.gatherStatsTest('O');
+		game.gatherStatsTest('O');
+		game.gatherStatsTest('O');
+		game.gatherStatsTest('-');
+		game.gatherStatsTest('-');
+		game.gatherStatsTest('-');
+		assertEquals(33.33333333333333, game.ratioCalcTest('X', game.totalRoundsTest()), 0.1);
+		assertEquals(33.33333333333333, game.ratioCalcTest('O', game.totalRoundsTest()), 0.1);
+		assertEquals(33.33333333333333, game.ratioCalcTest('-', game.totalRoundsTest()), 0.1);
+	}
 
 /*Showcase test*/
 /*

@@ -53,7 +53,7 @@ public class Game{
     }
 
     public static String findWinnerTest(char winner){
-    	return findWinner(winner);
+        return findWinner(winner);
     }
 
     private static String findWinner(char winner){
@@ -214,6 +214,50 @@ public class Game{
         System.out.println("Player2\nType your name:\n" + "Press enter for default name.");
         name2 = in.nextLine();
         selectNames(name1, name2);
+    }
+
+    public static void gatherStatsTest(char result){
+    	gatherStats(result);
+    }
+
+    private static void gatherStats(char result){
+        if(result == 'X') Build.player1Wins += 1;
+        else if(result == 'O') Build.player2Wins += 1;
+        else Build.gameTies += 1;
+    }
+
+    public static void printStats(){
+        double totalRounds = totalRounds();
+        double player1WinRatio = ratioCalc(Build.player1.charAt(0), totalRounds);
+        double player2WinRatio = ratioCalc(Build.player2.charAt(0), totalRounds);
+        double tieRatio = ratioCalc('-', totalRounds);
+        System.out.printf("Player %S has a winning ratio of %.2f %% or %d victories.\n", Build.player1, player1WinRatio, Build.player1Wins);
+        System.out.printf("Player %S has a winning ratio of %.2f %% or %d victories.\n", Build.player2, player2WinRatio, Build.player2Wins);
+        System.out.printf("Player %S and %S have a tie ratio of %.2f%% or %d ties.", Build.player1, Build.player2, tieRatio, Build.gameTies);
+    }
+
+    public static double totalRoundsTest(){
+    	return totalRounds();
+    }
+
+    private static double totalRounds(){
+        return Build.player1Wins + Build.player2Wins + Build.gameTies;
+    }
+
+	public static double ratioCalcTest(char playerIndicator, double totalRounds){
+		return ratioCalc(playerIndicator, totalRounds);
+    }
+
+
+    private static double ratioCalc(char playerIndicator, double totalRounds){
+        double tmp = 0;
+        if(playerIndicator == 'X') tmp = (Build.player1Wins/totalRounds)*100;
+
+        if(playerIndicator == 'O') tmp = (Build.player2Wins/totalRounds)*100;
+
+        if(playerIndicator == '-') tmp = (Build.gameTies/totalRounds)*100;
+
+        return tmp;
     }
 
     public static void main(String[] args){
