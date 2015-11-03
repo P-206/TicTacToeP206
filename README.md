@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/P-206/TicTacToeP206.svg?branch=master)](https://travis-ci.org/P-206/TicTacToeP206)
 
+<a href="https://codecov.io/github/P-206/TicTacToeP206">Code Coverage</a>
 # TicTacToeP206
 *The game tick tack toe from P206*
 
