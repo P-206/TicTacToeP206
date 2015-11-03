@@ -16,22 +16,22 @@
 Java
 
 - **1. Classes**
-Classes are written in upper camel casing, where the fyrst letter in the word is capitalized.
-*Example: UpperCamelCasing.
+Classes are written in upper camel casing, where the first letter in the word is capitalized.
+<br Example: UpperCamelCasing/>
 
 - **2. Functions**
 Functions are written in lower camel casing, where the first letter in the word is lower case.
-*Example: camelCasing
+<br Example: camelCasing/>
 
 - **3. General**
 We used K&R indent style where a curly bracket is inserted after a statement and below the contents on the statement. Everything within a statement is indented for each curly bracket used.
 
-Example:
-
+<br Example:/>
+```
 public static void play(){
 	do{	
 		play(Build.turn);		
 	}while(!Build.gameOver);	
 }
-
+```
 
