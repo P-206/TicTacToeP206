@@ -3,8 +3,17 @@ jdk:
 - oraclejdk8
 - oraclejdk7
 - openjdk6
+addons:
+  coverity_scan:
+      project:
+      name: P-206/TicTacToeP-206
+      description: TicTacToe application
+      notification_email: brynjar14@ru.is
+      build_command_prepend: "./gradlew clean"
+      build_command: "./gradlew build"
+      branch_pattern: master
 
 before_install:
--pip install --user codecov
+- pip install --user codecov
 after_success:
 - codecov
