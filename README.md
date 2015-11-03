@@ -13,6 +13,8 @@
 
 [Design report](docs/designReport.md)
 
+<a href="https://travis-ci.org/P-206/TicTacToeP206">Travis CI</a>
+
 # TicTacToeP206
 *The game tick tack toe from P206*
 
