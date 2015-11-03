@@ -26,12 +26,9 @@ We used K&R indent style where a curly bracket is inserted after a statement and
 Example:
 
 public static void play(){
-	do{
-		
-		play(Build.turn);
-		
-	}while(!Build.gameOver);
-	
+	do{	
+		play(Build.turn);		
+	}while(!Build.gameOver);	
 }
 
 
