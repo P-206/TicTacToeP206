@@ -241,7 +241,7 @@ public class Game{
         double tieRatio = ratioCalc('-', totalRounds);
         System.out.printf("Player %s has a winning ratio of %.2f %% or %d victories.\n", Build.player1, player1WinRatio, Build.player1Wins);
         System.out.printf("Player %s has a winning ratio of %.2f %% or %d victories.\n", Build.player2, player2WinRatio, Build.player2Wins);
-        System.out.printf("Player %s and %s have a tie ratio of %.2f%% or %d ties.", Build.player1, Build.player2, tieRatio, Build.gameTies);
+        System.out.printf("Player %s and %s have a tie ratio of %.2f%% or %d ties.\n", Build.player1, Build.player2, tieRatio, Build.gameTies);
     }
 
     public static char returnPlayerTest(String player){      
