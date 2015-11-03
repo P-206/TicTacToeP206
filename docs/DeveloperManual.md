@@ -4,14 +4,6 @@ In this report we will present to you a documentation of our project in Software
 ## Introduction
 This TicTacToe game is developed by P-206. The group used Test-Driven-Development also know as TDD and we recommend that developers that want to be able to use our product to understand how it works. Developers should have basic understanding in Java.
 
-### Project infrastructure
-In the project we followed the assingment's instructions, some of them included:
-  - Good design practices
-  - Loosely coupled code
-  - Store the code base on GitHub
-  - Used Test Driven Develpement for the business logic
-  - Executable output
-
 ### Software Requirements
 It is required for the TicTacToe to work properly is to use these software.
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
